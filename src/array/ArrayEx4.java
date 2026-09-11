@@ -7,7 +7,7 @@ public class ArrayEx4 {
         for (int i = 0; i < arr.length; i++) {
             total += arr[i];
         }
-        System.out.println("점수의 합: " + total);
-        System.out.printf("점수의 평균: " + "%.1f", (double) total / 9);
+        System.out.println( total);
+        System.out.printf("%.1f", (double) total / arr.length);
     }
 }
