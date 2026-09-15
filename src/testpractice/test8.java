@@ -13,6 +13,7 @@ public class test8 {
                 int b = a + 4;
                 for (int j = 0; j < 5; j++) {
                     System.out.print(b-- + " ");
+                    a++;
                 }
                 System.out.println();
             }
