@@ -10,7 +10,7 @@ public class test1 {
         } else {
             a = "미통과";
         }
-        System.out.println("나이: " + age + "\n" +"점수: " +score +"\n" + "결과: " + a);
+        System.out.println("나이: " + age + "\n점수: " +score +"\n결과: " + a);
 
     }
 }
