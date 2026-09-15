@@ -11,12 +11,13 @@ public class test17 {
         };
         String[] subName = {"국어", "영어", "수학"};
 
-        for (int i = 0; i < subName.length; i++) {
+        for (int i = 0; i < subName.length ; i++) {
             int total = 0;
-            for (int j = 0; j < score.length; j++) {
+            for (int j = 0; j < 5; j++) {
                 total += score[j][i];
             }
             System.out.println(subName[i] + ": " + total / 5.0);
+
         }
     }
 }

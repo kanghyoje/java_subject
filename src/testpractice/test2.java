@@ -5,19 +5,13 @@ public class test2 {
         int score = 86;
         System.out.println("점수: " + score);
 
+        char a;
         switch (score / 10) {
-            case 10:
-            case 9:
-                System.out.println("등급:A");
-                break;
-            case 8:
-                System.out.println("등급:B");
-                break;
-            case 7:
-                System.out.println("등급:C");
-                break;
-            default:
-                System.out.println("등급:D");
+            case 10, 9 -> a ='A';
+            case 8 -> a = 'B';
+            case 7 -> a = 'C';
+            default -> a = 'D';
         }
+        System.out.println("등급: " + a);
     }
 }

@@ -6,9 +6,9 @@ public class test5 {
         int index = 0;
         for (int i = 0; i < numbers.length; i++) {
             if (i % 2 == 0) {
-                numbers[index++] = (i+1) * 2;
+                numbers[index++] = (i + 1) * 2;
             } else {
-                numbers[index++] = (i+2) * 3;
+                numbers[index++] = (i + 2) * 3;
             }
         }
         System.out.print("numbers 배열에 저장된 값: ");
