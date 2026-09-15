@@ -8,9 +8,6 @@ public class ArrayEx7 {
 
         for (int i = 0; i < alpha1.length; i++) {
             alpha1[i] = (char) ('A' + i);
-        }
-
-        for (int i = 0; i < alpha2.length; i++) {
             alpha2[i] = (char) ('N' + i);
         }
 
