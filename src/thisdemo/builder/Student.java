@@ -15,6 +15,14 @@ public class Student {
         this.phoneNumber = builder.phoneNumber;
     }
 
+    public void showInfo() {
+        System.out.println("학번: " + id);
+        System.out.println("이름: " + name);
+        System.out.println("학년: " + grade);
+        System.out.println("전공: " + major);
+        System.out.println("전화번호: " + phoneNumber);
+    }
+
     public static class Builder {
         private int id;
         private String name;
@@ -39,6 +47,16 @@ public class Student {
         }
         public Student build() {
             return new Student(this);
+        }
+
+        public static void main(String[] args) {
+            Student student = new Student
+                    .Builder(1234, "강감찬", 1)
+                    .setMajor("인공지능")
+                    .setPhoneNumber("010-1111-2222")
+                    .build();
+            student.showInfo();
+
         }
     }
 }
