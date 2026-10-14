@@ -8,4 +8,15 @@ public class Subway {
     public Subway(int lineNumber) {
         this.lineNumber = lineNumber;
     }
+
+    public void take() {
+        money += 1500;
+        passengerCount ++;
+    }
+
+    public void showInfo() {
+        System.out.println(lineNumber + "번 버스의 승객은 "
+                + passengerCount + "명이고, 현재 수입은 "
+                + money + "입니다.");
+    }
 }

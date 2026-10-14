@@ -12,10 +12,12 @@ public class Student {
 
     public void getBus(Bus bus) {
         this.money -= 1000;
+        bus.take();
     }
 
     public void getSubway(Subway subway) {
         this.money -= 1500;
+        subway.take();
     }
 
     public void showInfo() {
