@@ -11,6 +11,6 @@ public class IOex1 {
             sc.nextLine();
             total += num;
         }
-        System.out.println("합계: " + total + ", 평균: " + total / 10);
+        System.out.println("합계: " + total + ", 평균: " + total / 10.0);
     }
 }
