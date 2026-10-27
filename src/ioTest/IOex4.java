@@ -8,7 +8,7 @@ public class IOex4 {
         int num = sc.nextInt();
         sc.nextLine();
         for (int i = 0; i < num; i++) {
-            for (int j = 4-i; j>-1; j--) {
+            for (int j = 0; j < num - 1 - i; j++) {
                 System.out.print(" ");
             }
             for (int j = 1 + (i * 2); j > 0; j--) {
