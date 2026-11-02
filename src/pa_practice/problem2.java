@@ -1,4 +1,6 @@
 package pa_practice;
+import encapsulation.Phone;
+
 import java.util.Scanner;
 
 class VendingMachine {
@@ -11,15 +13,16 @@ class VendingMachine {
         this.price = price;
         this.stock = stock;
     }
-    public void sell(int quantity) {
-        if (quantity > 0 & stock >= quantity) {
-            stock -= quantity;
+
+    public void sell(int a) {
+        if (a > 0 && a <= stock) {
+            stock -= a;
         } else {
             System.out.println("음료를 판매할 수 없습니다.");
         }
     }
+
     public void showInfo() {
-        System.out.println("==판매 후==");
         System.out.println("음료 이름: " + name);
         System.out.println("가격: " + price + "원");
         System.out.println("남은 재고: " + stock + "개");
@@ -29,11 +32,10 @@ public class problem2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         VendingMachine machine = new VendingMachine("콜라", 1500, 10);
+        int c = sc.nextInt();
+        machine.sell(c);
 
-        int quantity = sc.nextInt();
-        sc.nextLine();
-
-        machine.sell(quantity);
+        System.out.println("==판매 후==");
         machine.showInfo();
     }
 }

@@ -10,8 +10,8 @@ class Customer {
         this.reservedSeats = 0;
     }
 
-    public void addReservation(int reservedSeats) {
-        this.reservedSeats += reservedSeats;
+    public void addReservation(int a) {
+        reservedSeats += a;
     }
 
     public void showInfo() {
@@ -22,7 +22,6 @@ class Customer {
 class Cinema {
     private String title;
     private int availableSeats;
-
     public Cinema(String title, int availableSeats) {
         this.title = title;
         this.availableSeats = availableSeats;
@@ -31,11 +30,9 @@ class Cinema {
     public void reserve(Customer customer, int count) {
         if (count <= 0) {
             System.out.println("올바른 좌석 수를 입력하세요.");
-        }
-        else if (count > availableSeats) {
+        } else if(count > availableSeats) {
             System.out.println("예약 가능한 좌석이 부족합니다.");
-        }
-        else {
+        } else {
             availableSeats -= count;
             customer.addReservation(count);
         }
@@ -51,20 +48,17 @@ public class problem3 {
         Scanner sc = new Scanner(System.in);
         Cinema cinema = new Cinema("어벤져스", 10);
 
-        Customer customer1 = new Customer("홍길동");
-        Customer customer2 = new Customer("김철수");
+        Customer c1 = new Customer("홍길동");
+        Customer c2 = new Customer("김철수");
 
-        int num1 = sc.nextInt();
-        sc.nextLine();
-        int num2 = sc.nextInt();
-        sc.nextLine();
+        int n1 = sc.nextInt();
+        int n2 = sc.nextInt();
 
-        cinema.reserve(customer1, num1);
-        cinema.reserve(customer2, num2);
-
+        cinema.reserve(c1, n1);
+        cinema.reserve(c2, n2);
         System.out.println("==예약 결과==");
-        customer1.showInfo();
-        customer2.showInfo();
+        c1.showInfo();
+        c2.showInfo();
         cinema.showInfo();
     }
 }

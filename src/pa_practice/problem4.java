@@ -17,6 +17,7 @@ class Car {
         this.dailyPrice = dailyPrice;
         this.num = serialNum++;
     }
+
     public int rent(int days) {
         rented = true;
         return dailyPrice * days;
@@ -30,33 +31,33 @@ class Car {
         System.out.println("대여 상태: " + rented);
         System.out.println();
     }
+
 }
 public class problem4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int totalPrice = 0;
 
-        //ArrayList 사용하여 차량 등록
         ArrayList<Car> cars = new ArrayList<Car>();
-        cars.add(new Car("234하5678", "teslar", 100000));
-        cars.add(new Car("555허2158", "sonata", 70000));
-        cars.add(new Car("123호4567","genesis", 90000));
-
-
+        cars.add(new Car("234하5678","teslar", 1000000));
+        cars.add(new Car("555허2158", "sonata", 700000));
+        cars.add(new Car("123호4567", "genesis", 900000));
         System.out.println("대여 차량(1.teslar, 2.sonata, 3.genesis)와 대여일수를 입력하세요.");
-        int choice = sc.nextInt();
+
+        int car = sc.nextInt();
         int days = sc.nextInt();
 
-        if (choice > 3) {
-            System.out.println("잘못된 입력입니다.");
+        if (car > 3) {
+            System.out.println("잘못된 입력입니다");
         } else {
-            totalPrice = cars.get(choice-1).rent(days);
+            totalPrice = cars.get(car-1).rent(days);
         }
 
-        for (Car car: cars) {
-            car.showInfo();
+        for (int i = 0; i < cars.size(); i++) {
+            cars.get(i).showInfo();
         }
 
         System.out.println("총 대여금액: " + totalPrice);
+
     }
 }

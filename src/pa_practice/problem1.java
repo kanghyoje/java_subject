@@ -9,14 +9,14 @@ class Rectangle {
         this.width = width;
         this.height = height;
     }
+
     public int getArea() {
         return width * height;
     }
 
     public int getRerimeter() {
-        return (width + height) * 2;
+        return 2 * (width + height);
     }
-
     public void showInfo() {
         System.out.println("가로: " + width);
         System.out.println("세로: " + height);
@@ -27,12 +27,10 @@ class Rectangle {
 public class problem1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int width = sc.nextInt();
-        sc.nextLine();
-        int height = sc.nextInt();
-        sc.nextLine();
-        Rectangle re = new Rectangle(width, height);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        Rectangle c = new Rectangle(a, b);
+        c.showInfo();
 
-        re.showInfo();
     }
 }
