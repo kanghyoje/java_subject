@@ -1,15 +1,16 @@
 package inheritance;
 
 public class Customer {
-    private int customerID;
-    private String customerName;
-    private String customerGrade;
+    protected int customerID;
+    protected String customerName;
+    protected String customerGrade;
     int bonusPoint;
     double bonusRatio;
 
     public Customer() {
         this.customerGrade = "SILVER";
         this.bonusRatio = 0.01;
+        System.out.println("상위 클래스 Customer() 생성자 호출");
     }
 
     public int calcPrice(int price) {
