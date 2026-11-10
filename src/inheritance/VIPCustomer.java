@@ -21,6 +21,12 @@ public class VIPCustomer extends Customer{
         System.out.println("하위 클래스 VIPCustomer(int, String, int) 생성자 호출");
     }
 
+    @Override
+    public int calcPrice(int price) {
+        bonusPoint += price * bonusRatio;
+        return price- (int) (price * saleRatio);
+    }
+
     public String showCustomerInfo() {
         return super.showCustomerInfo() + "당담 상담원 아이디는 " + agentID;
     }
