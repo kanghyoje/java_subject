@@ -1,4 +1,4 @@
-package polymorphsim;
+package polymorphsim.animal;
 
 public class Animal {
     public void move() {
