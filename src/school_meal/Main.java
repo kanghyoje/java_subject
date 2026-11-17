@@ -23,10 +23,10 @@ public class Main {
             double wasteGrams = sc.nextDouble();
 
             if (style == 1) {
-                RiceFood rF = new RiceFood(name,servedGrams,wasteGrams);
+                Food rF = new RiceFood(name,servedGrams,wasteGrams);
                 wM.addFood(rF);
             } else if (style == 2) {
-                SideDish sD = new SideDish(name,servedGrams,wasteGrams);
+                Food sD = new SideDish(name,servedGrams,wasteGrams);
                 wM.addFood(sD);
             }
         }
